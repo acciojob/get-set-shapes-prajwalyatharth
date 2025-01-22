@@ -1,23 +1,24 @@
-//complete this code
 class Rectangle {
-	constructor(width, height){
-		this.width = width;
-		this.height = height;
-	}
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
 
-	getArea(){
-		return this.width * this.height;
-	}
+    // Method to calculate the area
+    getArea() {
+        return this.width * this.height;
+    }
 }
 
-class Square extends Animal {
-	constructor(width){
-		super(width, height);
-	}
+class Square extends Rectangle {
+    constructor(width) {
+        super(width, width); // Call Rectangle constructor with equal width and height
+    }
 
-	getPerimeter(){
-		return 4 * this.width;
-	}
+    // Method to calculate the perimeter
+    getPerimeter() {
+        return 4 * this.width;
+    }
 }
 
 const rectangle = new Rectangle(5, 10);
